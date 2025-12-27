@@ -14,7 +14,7 @@ let zelda = [
     { title: "ゼルダの伝説 時のオカリナ", releaseYear: "1998", image: "zeldat.jpg", console: "NINTENDO 64", impression: "ゼルダ作品初の3Dである。今のゼルダ作品の原型でとっても完成度が高い。個人的にも1、2を争う作品である。ちなみにこの作品によってこれからの作品は三つの世界に分岐する。"},
     { title: "ゼルダの伝説 ムジュラの仮面", releaseYear: "2000", image: "zeldam.jpg", console: "NINTENDO 64", impression: "三日で落ちてくる月をどうにかする話。三日ごとに世界をやり直し、何回も同じ日を繰り返すゲーム性はかなり珍しい。ホラー要素が多く小学3年生の自分には厳しかった。しかし「時のオカリナ」に並ぶほど好きな作品である。"},
     { title: "ゼルダの伝説 ふしぎの木の実", releaseYear: "2001", image: "zeldah.jpg", console: "ゲームボーイカラー", impression: "さらわれたディンとホロドラムの四季を取り戻すため、リンクが冒険へと向かう話。ハードを所持していないため未プレイ。やりたい。"},
-    { title: "ゼルダの伝説 風のタクト", releaseYear: "2002", image: "zaldakaze.jpg", console: "ニンテンドーゲームキューブ", impression: "『時のオカリナ』で大人リンクがガノンドロフを封印してから、数百年後の世界である。海に沈んだハイラルの大地を復活させようとするガノンドロフの野望が成就しそうになった瞬間ハイラル王によってトライフォースを取られてしまい笑うしかなくなってしまう様子はかなり哀愁が漂う。ハイラル王は流石にきったない"},
+    { title: "ゼルダの伝説 風のタクト", releaseYear: "2002", image: "zeldakaze.jpg", console: "ニンテンドーゲームキューブ", impression: "『時のオカリナ』で大人リンクがガノンドロフを封印してから、数百年後の世界である。海に沈んだハイラルの大地を復活させようとするガノンドロフの野望が成就しそうになった瞬間ハイラル王によってトライフォースを取られてしまい笑うしかなくなってしまう様子はかなり哀愁が漂う。ハイラル王は流石にきったない"},
     { title: "ゼルダの伝説 4つの剣+", releaseYear: "2004", image: "zelda+.jpg", console: "ニンテンドーゲームキューブ", impression: "ゼルダ作品にしては珍しく4人プレイまでできる。異色だったためかあまり売れなかったらしい。それでも結構評判はいい。"},
     { title: "ゼルダの伝説 ふしぎのぼうし", releaseYear: "2004", image: "zeldahu.jpg", console: "ゲームボーイアドバンス", impression: "主人公リンクの体を縮小させたり元の大きさに戻したりしながら冒険を進める。ハードを所持していないため未プレイ。やりたい。"},
     { title: "ゼルダの伝説 トワイライトプリンセス", releaseYear: "2006", image: "zeldatw.jpg", console: "ニンテンドーゲームキューブ", impression: "神ゲーの一つ。相棒のミドナがとっても可愛い。マスコット姿の方が人気だが真の姿の方がどう考えてもいいに決まっている。"},
@@ -73,13 +73,13 @@ app.get("/zelda_add", (req, res) => {
     console: req.query.console,
     impression: req.query.impression,     
   };
-  baki.push(newdata);
+  zelda.push(newdata);
   res.redirect('/zelda');
 });
 
 app.get("/zelda_delete", (req, res) => {
   let id = req.query.id;
-  baki.splice(id, 1);
+  zelda.splice(id, 1);
   res.redirect('/zelda');
 });
 
@@ -117,13 +117,13 @@ app.get("/mg_add", (req, res) => {
     console: req.query.console,
     impression: req.query.impression,     
   };
-  baki.push(newdata);
+  mg.push(newdata);
   res.redirect('/mg');
 });
 
 app.get("/mg_delete", (req, res) => {
   let id = req.query.id;
-  baki.splice(id, 1);
+  mg.splice(id, 1);
   res.redirect('/mg');
 });
 
