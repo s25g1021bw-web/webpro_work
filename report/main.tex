@@ -40,37 +40,12 @@
   numbersep=1zw,
   lineskip=-0.5ex
 }
-\renewcommand{\lstlistingname}{ソースコード}
 
-\makeatletter
-    \let\l@chapter@x=\l@chapter
-    \def\l@chapter#1#2{\l@chapter@x{#1}\@empty}
-\makeatother
-
-\pagestyle{headings}
-
-\title{
-  \bfseries\vskip30pt
-  webプログラミング　レポート\\
-  \vspace{1cm}
-}
-
-\author{
-  \\
-  千葉工業大学\\
-  情報変革科学部 情報工学科\\
-  \\
-  \vspace{.5cm}
-}
-
-\date{
-  \bfseries\Large\vskip10pt
-{
-  {\hspace{2cm}}学生番号 \underline{\makebox[8cm][c]{25G1XXX}} \vskip50pt
-  {\hspace{2cm}}氏{\hspace{2em}}名 \underline{\makebox[8cm][c]{情報　工太}}
-}
 
 \begin{document}
+\title{webプロレポート}
+\author{学籍番号:25G1021 \\ 氏名:梅澤颯太}
+\date{2025年12月19日}
 \maketitle
 \thispagestyle{empty}
 \setcounter{tocdepth}{3}
@@ -78,15 +53,11 @@
 \pagenumbering{roman}
 \pagenumbering{arabic}
 
-% \input{00_tutorial}
-% \input{01_work_A}
-% \input{02_work_B}
-% \input{03_work_C}
-% \input{04_integraion}
+% \input{user}
+ \input{administrator}
+% \input{developer1}
+% \input{developer2}
+% \input{developer3}
 
-%
-
-\bibliographystyle{junsrt}
-\bibliography{refs}
 
 \end{document}

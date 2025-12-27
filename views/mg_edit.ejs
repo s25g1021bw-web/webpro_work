@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>作品編集 - <%= data.title %></title>
+</head>
+<body>
+  <h2>「<%= data.title %>」の情報を編集する</h2>
+  <form action="/mg_update" method="get">
+    <input type="hidden" name="id" value="<%= id %>">
+
+    <div>
+      <label>タイトル:</label>
+      <input type="text" name="title" value="<%= data.title %>">
+    </div>
+
+    <div>
+      <label>発売年:</label>
+      <input type="text" name="releaseYear" value="<%= data.releaseYear %>">
+    </div>
+
+    <div>
+      <label>対応機種:</label>
+      <input type="text" name="volume1" value="<%= data.console %>">
+    </div>
+
+    <div>
+      <label>感想:</label>
+      <textarea name="impression" rows="10"><%= data.impression %></textarea>
+    </div>
+
+    <button type="submit" class="save-btn">更新を保存する</button>
+
+  </form>
+  
+  <a href="/mg">キャンセルして戻る</a>
+</body>
+</html>

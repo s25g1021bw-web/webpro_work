@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.title %></title>
+</head>
+<body>
+  <h2><%= data.title %>の詳細</h2>
+    <img src="/public/<%= data.image %>" style="max-width: 200px;">
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>タイトル</td><td><%= data.title %></td></tr>
+    <tr><td>巻数</td><td>全<%= data.volume1 %>巻</td></tr>
+    <tr><td>話数</td><td>全<%= data.volume2 %>話</td></tr>
+  </table>
+  <h3>概要と個人的な感想</h3>
+  <p><%= data.impression %></p>
+  <a href="/baki">作品一覧に戻る</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>バキの作品一覧</title>
+</head>
+<body>
+  <h2>刃牙作品の一覧</h2>
+  <a href="/baki_add">新規追加</a>
+  <table>
+    <tr><th>作品名</th><th>連載期間</th><th>操作</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr>
+        <tr><td><a href="/baki/<%= number %>"><%= row.title %></a></td>
+        <td><%= row.releaseYear %></td>
+        <td><a href="/baki_edit_page?id=<%= number %>">編集</a><a href="/baki_delete?id=<%= number %>">削除</a></td>
+        </tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+      <a href="/top">Webアプリケーション一覧に戻る</a>
+</body>
+</html>

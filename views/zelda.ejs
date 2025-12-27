@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ゼルダの伝説の本編作品一覧</title>
+</head>
+<body>
+  <h2>ゼルダの伝説の本編作品の一覧</h2>
+  <a href="/zelda_add">新規追加</a>
+  <table>
+    <tr><th>作品名</th><th>発売年</th><th>操作</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr>
+        <tr><td><a href="/zelda/<%= number %>"><%= row.title %></a></td>
+        <td><%= row.releaseYear %></td>
+        <td><a href="/zelda_edit_page?id=<%= number %>">編集</a><a href="/zelda_delete?id=<%= number %>">削除</a></td>
+        </tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+    <a href="/top">Webアプリケーション一覧に戻る</a>
+</body>
+</html>
