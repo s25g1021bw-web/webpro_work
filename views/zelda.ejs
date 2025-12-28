@@ -12,7 +12,7 @@
       <% let number = 0 %>
       <% for( let row of data ) { %>
         <tr>
-        <tr><td><a href="/zelda/<%= number %>"><%= row.title %></a></td>
+        <td><a href="/zelda/<%= number %>"><%= row.title %></a></td>
         <td><%= row.releaseYear %></td>
         <td><a href="/zelda_edit_page?id=<%= number %>">編集</a><a href="/zelda_delete?id=<%= number %>">削除</a></td>
         </tr>

@@ -71,7 +71,8 @@ app.get("/zelda_add", (req, res) => {
     title: req.query.title,       
     releaseYear: req.query.releaseYear, 
     console: req.query.console,
-    impression: req.query.impression,     
+    impression: req.query.impression, 
+    image: "noimage.jpg"    
   };
   zelda.push(newdata);
   res.redirect('/zelda');
@@ -95,6 +96,7 @@ app.get("/zelda_update", (req, res) => {
     releaseYear: req.query.releaseYear,
     console: req.query.console,
     impression: req.query.impression,
+    image: zelda[id].image
   };
   zelda[id] = updatedData;
   res.redirect('/zelda');
@@ -115,7 +117,8 @@ app.get("/mg_add", (req, res) => {
     title: req.query.title,       
     releaseYear: req.query.releaseYear, 
     console: req.query.console,
-    impression: req.query.impression,     
+    impression: req.query.impression, 
+    image: "noimage.jpg"    
   };
   mg.push(newdata);
   res.redirect('/mg');
@@ -139,6 +142,7 @@ app.get("/mg_update", (req, res) => {
     releaseYear: req.query.releaseYear,
     console: req.query.console,
     impression: req.query.impression,
+    image: mg[id].image
   };
   mg[id] = updatedData;
   res.redirect('/mg');
@@ -160,7 +164,8 @@ app.get("/baki_add", (req, res) => {
     releaseYear: req.query.releaseYear, 
     volume1: req.query.volume1,
     volume2: req.query.volume2,
-    impression: req.query.impression,     
+    impression: req.query.impression, 
+    image: "noimage.jpg"    
   };
   baki.push(newdata);
   res.redirect('/baki');
@@ -185,6 +190,7 @@ app.get("/baki_update", (req, res) => {
     volume1: req.query.volume1,
     volume2: req.query.volume2,
     impression: req.query.impression,
+    image: baki[id].image
   };
   baki[id] = updatedData;
   res.redirect('/baki');
